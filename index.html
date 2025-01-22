@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil's Photo Booth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Nama Nikhil Kumar Photo Booth</h1>
+        <input type="file" id="uploadImage" accept="image/*">
+        
+        <div class="image-editor">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="controls">
+            <label for="brightness">Brightness:</label>
+            <input type="range" id="brightness" min="-100" max="100" value="0">
+            
+            <label for="contrast">Contrast:</label>
+            <input type="range" id="contrast" min="-100" max="100" value="0">
+            
+            <label for="filter">Filters:</label>
+            <select id="filter">
+                <option value="">None</option>
+                <option value="grayscale(100%)">Grayscale</option>
+                <option value="sepia(100%)">Sepia</option>
+                <option value="invert(100%)">Invert</option>
+                <option value="blur(5px)">Blur</option>
+                <option value="saturate(2)">Saturate</option>
+                <option value="hue-rotate(90deg)">Hue Rotate</option>
+            </select>
+            
+            <div class="crop-options">
+                <label for="aspectRatio">Aspect Ratio:</label>
+                <button class="aspectBtn" data-ratio="6:9">6:9</button>
+                <button class="aspectBtn" data-ratio="3:2">3:2</button>
+                <button class="aspectBtn" data-ratio="4:3">4:3</button>
+            </div>
+
+            <button id="cropBtn">Apply Crop</button>
+            <button id="revertBtn">Revert Changes</button>
+            <button id="downloadBtn">Download Edited Image</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
