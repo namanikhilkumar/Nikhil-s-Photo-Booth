@@ -1,0 +1,125 @@
+/* General reset and layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #00bcd4, #8e24aa);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 90%;
+    transition: transform 0.2s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.controls {
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="range"], select {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 5px;
+    padding: 8px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e88e5;
+}
+
+button:active {
+    background-color: #1976d2;
+}
+
+button:focus {
+    outline: none;
+}
+
+.aspectBtn {
+    background-color: #4CAF50;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.aspectBtn:hover {
+    background-color: #45a049;
+}
+
+button#revertBtn {
+    background-color: #ff5722;
+}
+
+button#revertBtn:hover {
+    background-color: #e64a19;
+}
+
+/* Canvas styling */
+canvas {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.crop-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
